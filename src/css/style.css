@@ -1,0 +1,212 @@
+input {
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: bold;
+  vertical-align: baseline;
+  outline: 0;
+  color: #fff;
+  display: block;
+  margin: 0 0 20px;
+  padding: 8px 12px 10px 12px;
+  border: 1px solid rgb(114, 104, 104);
+  background: rgb(54, 53, 53);
+}
+
+.open-chat {
+  color: white;
+  text-align: right;
+  padding: 5px 5px 5px 0px;
+  position: fixed;
+  right: 10px;
+  cursor: pointer;
+}
+
+.chat.hidden {
+  display: none;
+}
+
+.open-chat.hidden {
+  display: none;
+}
+
+.chat .message-received {
+  color: white;
+  padding: 5px;
+}
+
+.chat .message-received.hidden {
+  display: none;
+}
+
+.chat .connected-count {
+  padding: 5px;
+  color: white;
+}
+
+.chat {
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  background-color: #212121;
+  width: 100vw;
+  z-index: 3;
+  height: calc(100vh - 100px);
+  overflow-y: scroll;
+  overflow-x : hidden;
+  padding: 10px 0 0 0;
+}
+
+.chat .message {
+  width: calc(100vw - 48px);
+}
+
+.recorder {
+  position: fixed;
+  bottom: 0;
+  height: 48px;
+  padding: 14px 0 14px 0;
+  background-color: #212121;
+  width: 100vw;
+  z-index: 3;
+  text-align: center;
+}
+a.download {
+  text-decoration: none;
+}
+.player {
+  width: 100vw;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  height: calc(100vh - 80px);
+  padding: 14px 0 14px 0;
+  background-color: #212121;
+  text-align: center;
+}
+.player .name, .player .instrument, .player .instructions {
+  width: calc(100vw - 42px);
+}
+
+.player .instructions {
+  color: white;
+  text-align: center;
+}
+
+.player .info {
+  position: relative;
+  top: 0;
+}
+.player .info .type {
+  position: fixed;
+  top: 50vh;
+  left: calc(50vw - 24px);
+}
+
+.player .back {
+  position: fixed;
+  bottom: calc(100px);
+  left: 10px;
+}
+
+.player {
+  display: inline-block;
+}
+
+.recorder .stop {
+  display: none;
+  cursor: pointer;
+}
+.recorder .audio {
+  cursor: pointer;
+}
+.recorder .video {
+  cursor: pointer;
+}
+.recorder.recording .audio, .recorder.recording .video {
+  display: none;
+}
+.recorder.recording .stop {
+  display: inline-block;
+}
+.recorder img {
+  padding: 0 12px 0 12px;
+}
+.recorder .controls {
+  position: relative;
+  left: -8px;
+}
+body {
+  background-color: #212121;
+  position: relative;
+  margin: 0 8px 0 8px;
+  overflow-x : hidden;
+}
+html, body {
+  height: 100vh;
+  width: 100vw;
+}
+.track .title, .track .instrument {
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 10px 0 10px 10px;
+  position: absolute;
+  overflow-wrap: break-word;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: calc(100% - 10px);
+}
+.track .instrument {
+  bottom: 0;
+}
+.track .title {
+  top: 0;
+}
+.track .type {
+  margin: 0;
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px);
+}
+.tracks {
+  height: calc(100vh - 80px);
+  overflow-y: scroll;
+  overflow-x : hidden;
+}
+.tracks .slider {
+  display: inline-block;
+  width: 100vw;
+  margin: 0 0 0 3px;
+}
+.track {
+  background-color: #2a3e29;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: calc(50vw - 13px);
+  height: 30vh;
+  max-width: 400px;
+  max-height: 350px;
+  outline: solid 4px #212121;
+  padding: 0;
+}
+.tracks .session-in-progress {
+  color: white;
+  text-transform: uppercase;
+  padding: 5px 5px 5px 0;
+}
+
+.tracks .title {
+  overflow: hidden;
+}
+h1 {
+  color: white;
+}
+input.select-audio {
+  width: calc(100vw - 10px);
+  margin: 0px 0 0 -10px;
+}

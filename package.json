@@ -1,0 +1,38 @@
+{
+  "name": "lmr",
+  "version": "0.0.0",
+  "description": "Live record music",
+  "keywords": [
+    "record",
+    "music",
+    "offline"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jameskyburz/live-music-session.git"
+  },
+  "author": {
+    "name": "James Kyburz",
+    "email": "james.kyburz@gmail.com"
+  },
+  "scripts": {
+    "start": "rm -rf dist && SIGNAL_URL=wss://live-music-session-signal.herokuapp.com NODE_ENV=production CACHE_KEY=$(date +%s)} VERSION=${VERSION:-0.0.0} parcel build src/index.html && serve",
+    "prestart:dev": "PORT=5001 node src/signal-server.js &",
+    "start:dev": "SIGNAL_URL=ws://localhost:5001 CACHE_KEY=$(date +%s) VERSION=dev parcel src/index.html"
+  },
+  "files": [
+    "src"
+  ],
+  "private": true,
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@babel/core": "7.9.0",
+    "@babel/plugin-transform-runtime": "7.9.0",
+    "cssnano": "4.1.10",
+    "parcel-bundler": "1.12.4",
+    "serve": "11.3.0"
+  },
+  "devDependencies": {
+    "ws": "7.2.3"
+  }
+}

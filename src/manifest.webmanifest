@@ -1,0 +1,19 @@
+{
+  "name": "Live music session",
+  "short_name": "Live music session",
+  "scope": "/",
+  "icons": [{
+    "src": "/img/favicon-144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  },{
+    "src": "/img/favicon-512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "display": "standalone",
+  "start_url": "/",
+  "screenshots": [],
+  "background_color": "#191414",
+  "theme_color": "#191414"
+}
